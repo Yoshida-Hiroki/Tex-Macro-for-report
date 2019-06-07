@@ -1,0 +1,29 @@
+%\documentclass[a4j,dvipdfmx]{jsarticle}
+\bibliographystyle{junsrt}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath,amssymb,physics,mathtools}
+\usepackage{multicol}
+\usepackage[dvipdfmx]{color}
+\usepackage{url}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage[top=10truemm,bottom=15truemm,left=25truemm,right=18truemm]{geometry}
+\usetikzlibrary{decorations.markings}
+
+\makeatletter
+    \renewcommand{\theequation}{%
+    \thesection.\arabic{equation}}
+    \@addtoreset{equation}{section}
+  \makeatother
+\date{}
+\makeatletter
+\def\@cite#1#2{$^{\mbox{\tiny[{#1\if@tempswa , #2\fi}]}}$}
+\makeatother
+\makeatletter
+\renewcommand{\@cite}[1]{\textsuperscript{#1)}}
+\renewcommand{\@biblabel}[1]{#1)}
+\makeatother
+\newcommand{\Cross}{$\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex, red] \draw (0,0) -- (1,1) (0,1) -- (1,0);}$}%
+\def\st#1\en{\begin{align*}#1\end{align*}}
