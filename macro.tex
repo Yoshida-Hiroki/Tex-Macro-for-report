@@ -11,13 +11,22 @@
 \usepackage{tikz}
 \usepackage[top=10truemm,bottom=15truemm,left=25truemm,right=18truemm]{geometry}
 \usetikzlibrary{decorations.markings}
-
-\makeatletter
-    \renewcommand{\theequation}{%
-    \thesection.\arabic{equation}}
-    \@addtoreset{equation}{section}
-  \makeatother
 \date{}
+
+% サブセクションを 問1,問2 にする設定
+\renewcommand{\thesubsection}{問題\arabic{section}.\arabic{subsection}}
+
+% サブサブセクションを (1),(2)にする設定
+%\renewcommand{\thesubsubsection}{(\arabic{subsubsubsection})}
+% (i),(ii)なら \arabic を \roman に変える。    (a),(b)なら \alph
+
+% 大問2の3番目の計算式のラベルを (2.3) にする設定
+% 計算式の参照には \eqref{eq:hoge} を使う
+\makeatletter
+  \renewcommand{\theequation}{\arabic{section}.\arabic{subsection}.\arabic{equation}}
+  \@addtoreset{equation}{subsection}
+\makeatother
+
 \makeatletter
 \def\@cite#1#2{$^{\mbox{\tiny[{#1\if@tempswa , #2\fi}]}}$}
 \makeatother
