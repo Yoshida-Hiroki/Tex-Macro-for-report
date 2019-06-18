@@ -17,7 +17,7 @@
 \date{}
 
 % サブセクションを 問1,問2 にする設定
-\renewcommand{\thesubsection}{問題\arabic{section}.\arabic{subsection}}
+%\renewcommand{\thesubsection}{問題\arabic{section}.\arabic{subsection}}
 
 % サブサブセクションを (1),(2)にする設定
 %\renewcommand{\thesubsubsection}{(\arabic{subsubsubsection})}
@@ -26,7 +26,7 @@
 % 大問2の3番目の計算式のラベルを (2.3) にする設定
 % 計算式の参照には \eqref{eq:hoge} を使う
 \makeatletter
-  \renewcommand{\theequation}{\arabic{section}.\arabic{subsection}.\arabic{equation}}
+  \renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
   \@addtoreset{equation}{subsection}
 \makeatother
 
