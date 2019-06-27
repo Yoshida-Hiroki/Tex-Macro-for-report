@@ -1,4 +1,4 @@
-%\documentclass[a4j,dvipdfmx]{jsarticle}
+\documentclass[a4j,dvipdfmx]{article}
 \bibliographystyle{junsrt}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{amsmath,amssymb,physics,mathtools}
@@ -17,7 +17,7 @@
 \date{}
 
 % サブセクションを 問1,問2 にする設定
-\renewcommand{\thesubsection}{問題\arabic{section}.\arabic{subsection}}
+%\renewcommand{\thesubsection}{問題\arabic{section}.\arabic{subsection}}
 
 % サブサブセクションを (1),(2)にする設定
 %\renewcommand{\thesubsubsection}{(\arabic{subsubsubsection})}
@@ -26,7 +26,7 @@
 % 大問2の3番目の計算式のラベルを (2.3) にする設定
 % 計算式の参照には \eqref{eq:hoge} を使う
 \makeatletter
-  \renewcommand{\theequation}{\arabic{section}.\arabic{subsection}.\arabic{equation}}
+  \renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
   \@addtoreset{equation}{subsection}
 \makeatother
 
@@ -39,3 +39,6 @@
 \makeatother
 \newcommand{\Cross}{$\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex, red] \draw (0,0) -- (1,1) (0,1) -- (1,0);}$}%
 \def\st#1\en{\begin{align}#1\end{align}}
+\newcommand{\hhat}[1]{\hat{\hat{#1}}}
+\newcommand{\kket}[1]{\ket{\ket{#1}}}
+\newcommand{\bbra}[1]{\bra{\bra{#1}}}
